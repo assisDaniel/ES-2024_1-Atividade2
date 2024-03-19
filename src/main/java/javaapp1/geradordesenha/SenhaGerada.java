@@ -115,9 +115,13 @@ public class SenhaGerada extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        copiarParaAreaTransferencia(jTextArea1.getText());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void copiarParaAreaTransferencia(String texto) {
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        StringSelection selection = new StringSelection(texto);
+        clipboard.setContents(selection, null);
     }
     /**
      * @param args the command line arguments
