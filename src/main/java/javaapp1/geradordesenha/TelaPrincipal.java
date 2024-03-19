@@ -122,9 +122,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        returnTamanho();
+        SenhaGerada frame= new SenhaGerada();
+        frame.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+    public Integer returnTamanho(){
+        tamanhoSenha= (Integer)jSpinner1.getValue();
+        return tamanhoSenha;
+    }
     /**
      * @param args the command line arguments
      */
