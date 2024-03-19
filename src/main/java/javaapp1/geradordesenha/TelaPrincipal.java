@@ -130,6 +130,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tamanhoSenha= (Integer)jSpinner1.getValue();
         return tamanhoSenha;
     }
+    
+    public String gerarSenha(int comprimento) {
+        String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*()_+-=[]{}|;:,.<>?";
+        StringBuilder senha = new StringBuilder();
+
+        Random random = new Random();
+        for (int i = 0; i < comprimento; i++) {
+            int index = random.nextInt(caracteres.length());
+            senha.append(caracteres.charAt(index));
+        }
+
+        return senha.toString();
+    }
     /**
      * @param args the command line arguments
      */
